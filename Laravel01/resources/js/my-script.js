@@ -2,4 +2,4 @@
 //     console.log('saya juga di klik');
 // });
 
-new bootstrap.Popover(document.getElementById('myPopober'));
+new bootstrap.Popover(document.getElementById('myPopover'));    
