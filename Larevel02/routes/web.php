@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+use App\Http\Controllers\Admin\PageController;
+
+Route::get('/Home',[PageController::class,'index']);
+Route::get('/DataSiswa',[PageController::class,'tampil']);
