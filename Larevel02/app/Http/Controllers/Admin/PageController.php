@@ -12,5 +12,12 @@
         public function tampil(){
             return  "Data Siswa Adminn";
         }
+
+        public function nilai(){
+            return view('daftar_nilai');
+        }
+        public function siswa(){
+            return view('daftar_siswa');
+        }
     }
 ?>

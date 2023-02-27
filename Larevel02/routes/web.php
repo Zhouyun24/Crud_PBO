@@ -21,3 +21,6 @@ use App\Http\Controllers\Admin\PageController;
 
 Route::get('/Home',[PageController::class,'index']);
 Route::get('/DataSiswa',[PageController::class,'tampil']);
+
+route::get('/siswa',[PageController::class,'siswa']);
+route::get('/NilaiSiswa',[PageController::class,'nilai']);
