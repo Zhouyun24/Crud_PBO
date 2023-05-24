@@ -33,25 +33,27 @@
                     <div class="text-danger">{{$message}}</div>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Jenis Kelamin</label>
-                    <div class="d-flex">
-                        <div class="form-check-me-3">
-                            <input class="from-check-input" type="radio" name="jenis_kelamin"
-                            id="laki_laki" value="L" 
-                            {{old('jenis_kelamin')=='L' ? 'chacked':''}}>
-                            <label class="from-check-label" for="laki_laki">Laki-laki</label>
-                            <div class="form-check">
-                                <input class="from-check-input" type="radio" name="jenis_kelamin"
-                                id="perempuan" value="P" 
-                                {{old('jenis_kelamin')=='P' ? 'chacked':''}}>
-                                <label class="from-check-label" for="perempuan">Perempuan</label>
-                            </div>
-                        </div>
-                        @error('jenis_kelamin')
-                        <div class="text-danger">{{$message}}</div>
-                        @enderror
-                        </div>
+               
+        <div class="mb-3">
+          <label class="form-label">Jenis Kelamin</label>
+          <div class="d-flex">
+            <div class="form-check me-3">
+              <input class="form-check-input" type="radio" name="jenis_kelamin"
+              id="laki_laki" value="L" 
+              {{ old('jenis_kelamin')=='L' ? 'checked': '' }}>
+              <label class="form-check-label" for="laki_laki">Laki-laki</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="jenis_kelamin"
+              id="perempuan" value="P" 
+              {{ old('jenis_kelamin')=='P' ? 'checked': '' }}>
+              <label class="form-check-label" for="perempuan">Perempuan</label>
+            </div>
+          </div>
+          @error('jenis_kelamin')
+              <div class="text-danger">{{ $message }}</div>
+          @enderror
+        </div>
                      <div class="mb3">
                         <label class="form-label" for="jurusan"></label>Jurusan</div>
                         <select  class="form-select" name="jurusan" id="jurusan" value="{{old('jurusan')}}">

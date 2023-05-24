@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
             $table->string('nim',8)->unique();
+            $table->string('nama');
             $table->char('jenis_kelamin',1);
             $table->string('jurusan');
             $table->text('alamat')->nullable();

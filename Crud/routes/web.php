@@ -19,5 +19,5 @@ Route::get('/mahasiswas', [MahasiswaController::class, 'index'])
 Route::get('/mahasiswas/create', [MahasiswaController::class, 'create'])
 ->name('mahasiswas.create');
 
-Route::get('/mahasiswas', [MahasiswaController::class, 'store'])
+Route::post('/mahasiswas', [MahasiswaController::class, 'store'])
 ->name('mahasiswas.store');

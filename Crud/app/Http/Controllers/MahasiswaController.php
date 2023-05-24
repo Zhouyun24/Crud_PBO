@@ -8,8 +8,7 @@ use App\Models\Mahasiswa;
 class MahasiswaController extends Controller
 {
     public function index(){
-        $mahasiswa = Mahasiswa::all();
-        return view('mahasiswa.index',['mahasiswa' => $mahasiswa]);
+        $mahasiswa
     }
 
     public function create(){
@@ -28,6 +27,7 @@ class MahasiswaController extends Controller
         $mahasiswa ->nim = $validateData['nim'];
         $mahasiswa->nama = $validateData['nama'];
         $mahasiswa->jenis_kelamin = $validateData['jenis_kelamin'];
+        $mahasiswa->jurusan = $validateData['jurusan'];
         $mahasiswa->alamat = $validateData['alamat'];
         $mahasiswa->save();
 
